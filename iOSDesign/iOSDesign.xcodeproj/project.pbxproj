@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		2200B1361C8AC25F00808B5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200B1351C8AC25F00808B5E /* AppDelegate.swift */; };
-		2200B1381C8AC25F00808B5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200B1371C8AC25F00808B5E /* ViewController.swift */; };
-		2200B13B1C8AC25F00808B5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2200B1391C8AC25F00808B5E /* Main.storyboard */; };
 		2200B13D1C8AC25F00808B5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2200B13C1C8AC25F00808B5E /* Assets.xcassets */; };
-		2200B1401C8AC25F00808B5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2200B13E1C8AC25F00808B5E /* LaunchScreen.storyboard */; };
+		2200B1521C8B258000808B5E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200B1511C8B258000808B5E /* MainViewController.swift */; };
+		2200B1541C8B260C00808B5E /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200B1531C8B260C00808B5E /* HomeTableViewController.swift */; };
+		2200B1561C8B263C00808B5E /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200B1551C8B263C00808B5E /* MessageTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2200B1321C8AC25F00808B5E /* iOSDesign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDesign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2200B1351C8AC25F00808B5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2200B1371C8AC25F00808B5E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2200B13A1C8AC25F00808B5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2200B13C1C8AC25F00808B5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2200B13F1C8AC25F00808B5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2200B1411C8AC25F00808B5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2200B1511C8B258000808B5E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2200B1531C8B260C00808B5E /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		2200B1551C8B263C00808B5E /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +54,94 @@
 		2200B1341C8AC25F00808B5E /* iOSDesign */ = {
 			isa = PBXGroup;
 			children = (
+				2200B1471C8B243200808B5E /* Classes */,
 				2200B1351C8AC25F00808B5E /* AppDelegate.swift */,
-				2200B1371C8AC25F00808B5E /* ViewController.swift */,
-				2200B1391C8AC25F00808B5E /* Main.storyboard */,
 				2200B13C1C8AC25F00808B5E /* Assets.xcassets */,
-				2200B13E1C8AC25F00808B5E /* LaunchScreen.storyboard */,
 				2200B1411C8AC25F00808B5E /* Info.plist */,
 			);
 			path = iOSDesign;
+			sourceTree = "<group>";
+		};
+		2200B1471C8B243200808B5E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2200B1491C8B243200808B5E /* Module */,
+				2200B1481C8B243200808B5E /* Model */,
+				2200B1501C8B243200808B5E /* ViewModel */,
+				2200B14F1C8B243200808B5E /* Tools */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2200B1481C8B243200808B5E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2200B1491C8B243200808B5E /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				2200B14C1C8B243200808B5E /* Main */,
+				2200B14B1C8B243200808B5E /* Home */,
+				2200B14D1C8B243200808B5E /* Message */,
+				2200B14A1C8B243200808B5E /* Discover */,
+				2200B14E1C8B243200808B5E /* Profile */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		2200B14A1C8B243200808B5E /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		2200B14B1C8B243200808B5E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2200B1531C8B260C00808B5E /* HomeTableViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2200B14C1C8B243200808B5E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2200B1511C8B258000808B5E /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		2200B14D1C8B243200808B5E /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				2200B1551C8B263C00808B5E /* MessageTableViewController.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		2200B14E1C8B243200808B5E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		2200B14F1C8B243200808B5E /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		2200B1501C8B243200808B5E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,9 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2200B1401C8AC25F00808B5E /* LaunchScreen.storyboard in Resources */,
 				2200B13D1C8AC25F00808B5E /* Assets.xcassets in Resources */,
-				2200B13B1C8AC25F00808B5E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,31 +214,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2200B1381C8AC25F00808B5E /* ViewController.swift in Sources */,
+				2200B1541C8B260C00808B5E /* HomeTableViewController.swift in Sources */,
 				2200B1361C8AC25F00808B5E /* AppDelegate.swift in Sources */,
+				2200B1561C8B263C00808B5E /* MessageTableViewController.swift in Sources */,
+				2200B1521C8B258000808B5E /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		2200B1391C8AC25F00808B5E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2200B13A1C8AC25F00808B5E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2200B13E1C8AC25F00808B5E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2200B13F1C8AC25F00808B5E /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2200B1421C8AC25F00808B5E /* Debug */ = {
@@ -248,7 +309,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = iOSDesign/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aikan.iOSDesign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -259,7 +322,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = iOSDesign/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aikan.iOSDesign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
