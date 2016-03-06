@@ -14,6 +14,7 @@
 		2200B1561C8B263C00808B5E /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200B1551C8B263C00808B5E /* MessageTableViewController.swift */; };
 		22930A751C8B2D7D0091DD1E /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22930A741C8B2D7D0091DD1E /* DiscoverTableViewController.swift */; };
 		22930A771C8B2D8C0091DD1E /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22930A761C8B2D8C0091DD1E /* ProfileTableViewController.swift */; };
+		22930A791C8BC3DE0091DD1E /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22930A781C8BC3DE0091DD1E /* MainTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		2200B1551C8B263C00808B5E /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
 		22930A741C8B2D7D0091DD1E /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
 		22930A761C8B2D8C0091DD1E /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		22930A781C8BC3DE0091DD1E /* MainTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				2200B1511C8B258000808B5E /* MainViewController.swift */,
+				22930A781C8BC3DE0091DD1E /* MainTabBar.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			files = (
 				22930A771C8B2D8C0091DD1E /* ProfileTableViewController.swift in Sources */,
 				2200B1541C8B260C00808B5E /* HomeTableViewController.swift in Sources */,
+				22930A791C8BC3DE0091DD1E /* MainTabBar.swift in Sources */,
 				2200B1361C8AC25F00808B5E /* AppDelegate.swift in Sources */,
 				2200B1561C8B263C00808B5E /* MessageTableViewController.swift in Sources */,
 				22930A751C8B2D7D0091DD1E /* DiscoverTableViewController.swift in Sources */,
