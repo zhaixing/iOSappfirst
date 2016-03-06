@@ -24,10 +24,12 @@ class VisitorLoginView: UIView {
     private func setupUI(){
 //        backgroundColor=UIColor.redColor()//做一个测试看看是不是成功了。
         addSubview(cycleView)
+        addSubview(backView)
         addSubview(iconView)
         addSubview(tipLabel)//这两行把下面的控件都加进来了。
         addSubview(loginBtn)
         addSubview(registerBtn)
+
         //都进来之后，设置布局
         //先让本身的布局失效才会显示自己定义的效果
 //        cycleView.translatesAutoresizingMaskIntoConstraints=false
@@ -68,11 +70,21 @@ class VisitorLoginView: UIView {
         
         addConstraint(NSLayoutConstraint(item: registerBtn, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 100))//宽度
         addConstraint(NSLayoutConstraint(item: registerBtn, attribute: .Height , relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 35))//高度
+        
+        //设置渐隐的约束
+        //位移枚举 || []
+        //对视图高宽约束的数值[Sting:NSNumber]
+        addConstraints( NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[backView]-0-|", options: [], metrics: nil, views: ["backView":backView]))
+        addConstraints( NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[backView]-(-35)-[registerBtn]", options: [], metrics: nil, views: ["backView":backView,"registerBtn":registerBtn]))
+        
+        //设置背景颜色
+        self.backgroundColor=UIColor(white: 0.93, alpha: 1)
     }
     
     //MARK: 懒加载 所有的控件
     private lazy var cycleView:UIImageView=UIImageView(image: UIImage(named: "visitordiscover_feed_image_smallicon"))
     private lazy var iconView:UIImageView=UIImageView(image: UIImage(named: "visitordiscover_feed_image_house"))
+    private lazy var backView:UIImageView=UIImageView(image: UIImage(named: "visitordiscover_feed_mask_smallicon"))//渐隐的效果
     //提示文案
     private lazy var tipLabel:UILabel = {
         let l = UILabel()
