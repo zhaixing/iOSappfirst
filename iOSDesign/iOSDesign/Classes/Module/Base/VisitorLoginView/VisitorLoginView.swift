@@ -10,6 +10,31 @@ import UIKit
 
 class VisitorLoginView: UIView {
 
+    //MARK:设置页面信息
+    func setUIInfo(imageName:String?,title:String){
+        iconView.hidden=false
+        tipLabel.text=title
+        if imageName != nil{
+            cycleView.image=UIImage(named:imageName!)
+            iconView.hidden=true
+            
+        }else{
+            //动画效果 让cycleview动起来
+            startAnimation()
+        }
+
+    }
+    
+    private func startAnimation(){
+        let anim=CABasicAnimation(keyPath: "transform.rotation")
+        anim.repeatCount=MAXFLOAT
+        anim.toValue=2*M_PI
+        anim.duration=10
+        anim.removedOnCompletion=false//当动画结束或者视图处于非活跃状态，动画不移除
+        cycleView.layer.addAnimation(anim, forKey: nil)
+    }
+    
+    
     //重写init方法
     init() {
         super.init(frame: CGRectZero)//初始化
@@ -54,8 +79,9 @@ class VisitorLoginView: UIView {
         //设置文案的约束
         addConstraint(NSLayoutConstraint(item: tipLabel, attribute: .CenterX, relatedBy: .Equal, toItem: cycleView, attribute: .CenterX, multiplier: 1.0, constant: 0))//设置了水平居中
         addConstraint(NSLayoutConstraint(item: tipLabel, attribute: .Top, relatedBy: .Equal, toItem: cycleView, attribute: .Bottom, multiplier: 1.0, constant: 16))//设置了垂直方向位置，16代表间隔。
-        //如果文字过长，设置换行，设置宽度
-//        addConstraint(NSLayoutConstraint(item: tipLabel, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 224))
+        //如果文字过长，设置换行，设置宽度 修改点
+        addConstraint(NSLayoutConstraint(item: tipLabel, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 236))
+        addConstraint(NSLayoutConstraint(item: tipLabel, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 35))
 //        
         //设置 登录的样式
         addConstraint(NSLayoutConstraint(item: loginBtn, attribute: .Left, relatedBy: .Equal, toItem: tipLabel, attribute: .Left, multiplier: 1.0, constant: 0))//设置了水平居中

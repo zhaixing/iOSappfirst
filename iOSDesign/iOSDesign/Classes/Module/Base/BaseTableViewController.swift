@@ -12,7 +12,7 @@ class BaseTableViewController: UITableViewController {
 
     //添加用户是否登录的标记
     var userLogin = false
-    
+    var visitorLoginView:VisitorLoginView?
     
     //loadview是苹果专门为 手写代码准备的，等于sb/xib
     //一旦使用这个方法 sb/xib 就自动失效
@@ -40,8 +40,11 @@ class BaseTableViewController: UITableViewController {
 //        print(view)
         //上面四行代码是测试用的，证明我创建好了一个可以自己定义的用户验证界面
         //下面是具体的实现，VisitorLoginView()继承自UIView()
-        let v=VisitorLoginView()
-        view=v
+//        let v=VisitorLoginView()
+//        view=v
+        
+        visitorLoginView = VisitorLoginView()
+        view = visitorLoginView
         //然后把精力集中在VisitorLoginView这个class里面
     }
     
