@@ -34,10 +34,15 @@ class BaseTableViewController: UITableViewController {
     }
     
     private func loadVisitorView(){//红色验证的页面，需要用户去登录的引导界面
-        let v=UIView()
-        v.backgroundColor=UIColor.redColor()
+//        let v=UIView()
+//        v.backgroundColor=UIColor.redColor()
+//        view=v
+//        print(view)
+        //上面四行代码是测试用的，证明我创建好了一个可以自己定义的用户验证界面
+        //下面是具体的实现，VisitorLoginView()继承自UIView()
+        let v=VisitorLoginView()
         view=v
-        print(view)
+        //然后把精力集中在VisitorLoginView这个class里面
     }
     
     //视图控制器 viewDidLoad
