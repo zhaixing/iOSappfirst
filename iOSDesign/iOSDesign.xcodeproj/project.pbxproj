@@ -12,6 +12,8 @@
 		2200B1521C8B258000808B5E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200B1511C8B258000808B5E /* MainViewController.swift */; };
 		2200B1541C8B260C00808B5E /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200B1531C8B260C00808B5E /* HomeTableViewController.swift */; };
 		2200B1561C8B263C00808B5E /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200B1551C8B263C00808B5E /* MessageTableViewController.swift */; };
+		22930A751C8B2D7D0091DD1E /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22930A741C8B2D7D0091DD1E /* DiscoverTableViewController.swift */; };
+		22930A771C8B2D8C0091DD1E /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22930A761C8B2D8C0091DD1E /* ProfileTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		2200B1511C8B258000808B5E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2200B1531C8B260C00808B5E /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		2200B1551C8B263C00808B5E /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
+		22930A741C8B2D7D0091DD1E /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
+		22930A761C8B2D8C0091DD1E /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 		2200B14A1C8B243200808B5E /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				22930A741C8B2D7D0091DD1E /* DiscoverTableViewController.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 		2200B14E1C8B243200808B5E /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				22930A761C8B2D8C0091DD1E /* ProfileTableViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -214,9 +220,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22930A771C8B2D8C0091DD1E /* ProfileTableViewController.swift in Sources */,
 				2200B1541C8B260C00808B5E /* HomeTableViewController.swift in Sources */,
 				2200B1361C8AC25F00808B5E /* AppDelegate.swift in Sources */,
 				2200B1561C8B263C00808B5E /* MessageTableViewController.swift in Sources */,
+				22930A751C8B2D7D0091DD1E /* DiscoverTableViewController.swift in Sources */,
 				2200B1521C8B258000808B5E /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +323,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aikan.iOSDesign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -328,6 +337,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aikan.iOSDesign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -350,6 +360,7 @@
 				2200B1461C8AC25F00808B5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
