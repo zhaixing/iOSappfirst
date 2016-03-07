@@ -9,13 +9,13 @@
 import UIKit
 
 //代理模式监听登录和注册点击事件
-protocol VisitorLoginViewDelegate:NSObjectProtocol{
+@objc protocol VisitorLoginViewDelegate:NSObjectProtocol{
     //协议方法
     //登录方法
-    func visitorWillLogin()
+    optional func visitorWillLogin()
     
     //注册方法
-    func visitorWillRegistor()
+    optional func visitorWillRegistor()
     
 }
 
@@ -27,11 +27,11 @@ class VisitorLoginView: UIView {
     //登录 注册方法的实现
     @objc func loginDidBtnClick(){
         //代理调用协议的方法
-        visitorDelegate?.visitorWillLogin()
+        visitorDelegate?.visitorWillLogin?()
     }
     
     @objc func registorBtnClick(){
-        visitorDelegate?.visitorWillRegistor()
+        visitorDelegate?.visitorWillRegistor?()
     }
     
     //MARK:设置页面信息
