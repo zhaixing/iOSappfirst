@@ -19,11 +19,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame:  UIScreen.mainScreen().bounds)
         window?.backgroundColor=UIColor.whiteColor()
         window?.makeKeyAndVisible()
+        //一定要尽早设置主题色
+        setThemeColor()
+        
         //设置跟视图控制器
         window?.rootViewController=MainViewController()
         return true
     }
 
+    private func setThemeColor(){
+        UINavigationBar.appearance().tintColor=themeColor
+        UITabBar.appearance().tintColor=themeColor
+        
+    }
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

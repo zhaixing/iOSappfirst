@@ -60,7 +60,7 @@ class MainViewController: UITabBarController {
         
         //设置点击后字体的颜色 查找点
 //        self.tabBar.tintColor = UIColor.init(red: 70/255.0, green: 200/255.0, blue: 202/255.0, alpha: 1.0)
-        self.tabBar.tintColor = UIColor.orangeColor()
+        self.tabBar.tintColor = themeColor
         let nav = UINavigationController(rootViewController: vc)
         vc.title=title
         vc.tabBarItem.image=UIImage(named: imageName)

@@ -17,6 +17,7 @@
 		22930A791C8BC3DE0091DD1E /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22930A781C8BC3DE0091DD1E /* MainTabBar.swift */; };
 		22930A7C1C8C09480091DD1E /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22930A7B1C8C09480091DD1E /* BaseTableViewController.swift */; };
 		22930A7F1C8C19810091DD1E /* VisitorLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22930A7E1C8C19810091DD1E /* VisitorLoginView.swift */; };
+		22930A811C8D01010091DD1E /* Comman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22930A801C8D01010091DD1E /* Comman.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		22930A781C8BC3DE0091DD1E /* MainTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		22930A7B1C8C09480091DD1E /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		22930A7E1C8C19810091DD1E /* VisitorLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorLoginView.swift; sourceTree = "<group>"; };
+		22930A801C8D01010091DD1E /* Comman.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comman.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 		2200B14F1C8B243200808B5E /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				22930A801C8D01010091DD1E /* Comman.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 			files = (
 				22930A771C8B2D8C0091DD1E /* ProfileTableViewController.swift in Sources */,
 				2200B1541C8B260C00808B5E /* HomeTableViewController.swift in Sources */,
+				22930A811C8D01010091DD1E /* Comman.swift in Sources */,
 				22930A7C1C8C09480091DD1E /* BaseTableViewController.swift in Sources */,
 				22930A791C8BC3DE0091DD1E /* MainTabBar.swift in Sources */,
 				2200B1361C8AC25F00808B5E /* AppDelegate.swift in Sources */,

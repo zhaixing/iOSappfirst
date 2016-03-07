@@ -8,8 +8,32 @@
 
 import UIKit
 
+//代理模式监听登录和注册点击事件
+protocol VisitorLoginViewDelegate:NSObjectProtocol{
+    //协议方法
+    //登录方法
+    func visitorWillLogin()
+    
+    //注册方法
+    func visitorWillRegistor()
+    
+}
+
 class VisitorLoginView: UIView {
 
+    //声明代理属性,属性默认是强引用，需要添加weak
+    weak var visitorDelegate:VisitorLoginViewDelegate?
+    
+    //登录 注册方法的实现
+    @objc func loginDidBtnClick(){
+        //代理调用协议的方法
+        visitorDelegate?.visitorWillLogin()
+    }
+    
+    @objc func registorBtnClick(){
+        visitorDelegate?.visitorWillRegistor()
+    }
+    
     //MARK:设置页面信息
     func setUIInfo(imageName:String?,title:String){
         iconView.hidden=false
@@ -105,6 +129,10 @@ class VisitorLoginView: UIView {
         
         //设置背景颜色
         self.backgroundColor=UIColor(white: 0.93, alpha: 1)
+        
+        //添加点击事件
+        loginBtn.addTarget(self, action: "loginDidBtnClick", forControlEvents: .TouchUpInside)
+        registerBtn.addTarget(self, action: "registorBtnClick", forControlEvents: .TouchUpInside)
     }
     
     //MARK: 懒加载 所有的控件

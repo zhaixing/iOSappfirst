@@ -8,7 +8,8 @@
 
 import UIKit
 
-class BaseTableViewController: UITableViewController {
+//协议中方法是必选的，如果不实现就报错
+class BaseTableViewController: UITableViewController,VisitorLoginViewDelegate {//面试题oc中没有继承，是用什么替代的？用协议
 
     //添加用户是否登录的标记
     var userLogin = false
@@ -44,8 +45,28 @@ class BaseTableViewController: UITableViewController {
 //        view=v
         
         visitorLoginView = VisitorLoginView()
+        
+        //设置代理,去下面第一个括号后面实现
+        visitorLoginView?.visitorDelegate=self
+        
+        
         view = visitorLoginView
         //然后把精力集中在VisitorLoginView这个class里面
+        
+        //左上角的登录，右上角的注册
+        self.navigationItem.rightBarButtonItem=UIBarButtonItem(title: "注册", style: .Plain, target: self, action: "visitorWillRegistor")
+        self.navigationItem.leftBarButtonItem=UIBarButtonItem(title: "登录", style: .Plain, target: self, action: "visitorWillLogin")
+        //设置上面登录注册的颜色
+
+    }
+    
+//    xmark:visitorDelegate 协议方法
+    func visitorWillLogin() {
+        print("come out")
+    }
+    
+    func visitorWillRegistor() {
+        print("come in")
     }
     
     //视图控制器 viewDidLoad
