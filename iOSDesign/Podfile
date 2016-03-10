@@ -1,0 +1,14 @@
+# Uncomment this line to define a global platform for your project
+platform :ios, '8.0'
+# Uncomment this line if you're using Swift
+use_frameworks!
+
+#在同一个项目中第一次使用pod install 以后都使用 pod update
+
+
+#导入AFN
+pod 'AFNetworking'
+pod 'SVProgressHUD'
+
+#pod install --help 查看pod install命令的帮助名利
+#pod install --no-repo-update//以后更新都输入这个命令就行了
