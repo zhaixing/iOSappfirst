@@ -63,6 +63,9 @@ class BaseTableViewController: UITableViewController,VisitorLoginViewDelegate {/
 //    xmark:visitorDelegate 协议方法
     func visitorWillLogin() {
         print("come out")
+        let oauth=OAuthViewController()
+        let nav = UINavigationController(rootViewController: oauth)
+        presentViewController(nav, animated: true, completion: nil)
     }
     
     func visitorWillRegistor() {
